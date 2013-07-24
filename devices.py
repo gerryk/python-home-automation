@@ -1,4 +1,8 @@
 class Device():
+    '''Device base class
+    Class from which all automatable devices are inherited.
+    Provides common aspects of automatable devices: name, type, status and a global address list
+    '''
     def __init__(self, n, t):
         self.name = n
         self.type = t
