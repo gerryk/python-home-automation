@@ -8,6 +8,7 @@ class Device():
         self.type = t
         self.status = 'OFF'
         self.command = ''   
+        self.switchable = False
         
     def get_status(self):
         return self.status
@@ -27,11 +28,11 @@ class Dimmer(Lightswitch):
         Lightswitch.__init__(self, n, t)
         self.brightness = 0
 
-    def brighten(self, inc):
+    def brighten(self, inc=1):
         if self.brightness < 255:
             self.brightness += 1
     
-    def darken(self, dec):
+    def darken(self, dec=1):
         if self.brightness > 0:
             self.brightness -= 1
 
@@ -41,11 +42,11 @@ class Dimmer(Lightswitch):
 
 class Relay(Device):
     def on(self):
-        pass
-    
+        self.status = 'ON'
+
     def off(self):
-        pass
-    
+        self.status = 'OFF'
+
 class Sensor(Device):
     pass
 
