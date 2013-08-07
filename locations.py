@@ -22,12 +22,12 @@ class Room(Location):
     
     def all_on(self):
         for d in self.devices:
-            if d.type == 'switch':
+            if d.switchable:
                 d.on()
                 
     def all_off(self):
         for d in self.devices:
-            if d.type == 'switch':
+            if d.switchable:
                 d.off()
         
         
