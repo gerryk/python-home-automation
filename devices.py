@@ -13,6 +13,8 @@ class Device():
     def get_status(self):
         return self.status
 
+    def send_command(self):
+        pass
 
 
 class Lightswitch(Device):
@@ -38,7 +40,7 @@ class Dimmer(Lightswitch):
 
     def get_brightness(self):
         return self.brightness
-    
+
 
 class Relay(Device):
     def on(self):
