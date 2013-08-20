@@ -29,12 +29,12 @@ class Dimmer(Lightswitch):
         self.brightness = 0
 
     def brighten(self, inc=1):
-        if self.brightness < 255:
-            self.brightness += 1
+        if self.brightness <= 255-inc:
+            self.brightness += inc
     
     def darken(self, dec=1):
-        if self.brightness > 0:
-            self.brightness -= 1
+        if self.brightness => 0+dec:
+            self.brightness -= dec
 
     def get_brightness(self):
         return self.brightness

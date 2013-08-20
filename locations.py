@@ -29,6 +29,9 @@ class Room(Location):
         for d in self.devices:
             if d.switchable:
                 d.off()
+
+    def sensor_trigger(obj):
+        pass
         
         
 class Floor(Location):
